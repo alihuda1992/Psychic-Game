@@ -16,16 +16,32 @@ document.onkeyup = function() {click()};
 
     var userclicked = event.key;
 
+    userinput.push(userclicked);
+    
+    console.log(userinput);
+    console.log(computerguess);
+
     if (computerguess === userclicked)  {
-        alert("You have the same letter!");
+        alert("You have the same letter! Reload to restart.");
         wins ++;
-        wins = document.getElementById("wins") ;
+        document.getElementById("wins").innerHTML = wins ;
+        document.getElementById("losses").innerHTML = losses;
+        document.getElementById("yourguesses").innerHTML = userinput;
+        document.getElementById("guessesleft").innerHTML = guessesLeft;
 
     }else {
         alert("Guess Again!");
         guessesLeft--;
         losses++
-        losses = document.getElementById("losses");
+        document.getElementById("wins").innerHTML = wins ;
+        document.getElementById("losses").innerHTML = losses;
+        document.getElementById("yourguesses").innerHTML = userinput;
+        document.getElementById("guessesleft").innerHTML = guessesLeft;
+        
+    }
+
+    if ( guessesLeft === 0) {
+        alert("GAME OVER");
     }
 }
 
