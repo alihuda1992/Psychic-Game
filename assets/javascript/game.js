@@ -6,6 +6,7 @@ var letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","
 var userinput = [];
 var userclicked;
 
+alert("Hello! begin by pressing a letter");
 
 computerguess = letters[Math.floor(Math.random()*letters.length)];
 
