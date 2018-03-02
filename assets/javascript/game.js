@@ -23,6 +23,7 @@ document.onkeyup = function() {click()};
 
     if (computerguess === userclicked)  {
         alert("You have the same letter! Reload to restart.");
+        alert("GAME OVER");
         wins ++;
         document.getElementById("wins").innerHTML = wins ;
         document.getElementById("losses").innerHTML = losses;
